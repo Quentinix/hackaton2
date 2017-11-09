@@ -45,9 +45,16 @@ class Jouet
     /**
      * @var string
      *
-     * @ORM\Column(name="quantite", type="integer", nullable=true)
+     * @ORM\Column(name="quantite_stock", type="integer", nullable=true)
      */
-    private $quantite;
+    private $quantite_stock;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="quantite_a_produire", type="integer", nullable=true)
+     */
+    private $quantite_a_produire;
 
     // /**
     // * @ORM\OneToMany(targetEntity="AppBundle\Entity\Categories", mappedBy="jouet")
