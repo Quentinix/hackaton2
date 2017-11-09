@@ -42,12 +42,18 @@ class Jouet
      */
     private $vignette;
 
-    private $enfant;
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="quantite", type="integer", nullable=true)
+     */
+    private $quantite;
 
     // /**
     // * @ORM\OneToMany(targetEntity="AppBundle\Entity\Categories", mappedBy="jouet")
     // */
     // private $categorie;
+    private $enfant;
 
 
     /**
@@ -130,5 +136,29 @@ class Jouet
     public function getVignette()
     {
         return $this->vignette;
+    }
+
+    /**
+     * Set quantite
+     *
+     * @param integer $quantite
+     *
+     * @return Jouet
+     */
+    public function setQuantite($quantite)
+    {
+        $this->quantite = $quantite;
+
+        return $this;
+    }
+
+    /**
+     * Get quantite
+     *
+     * @return integer
+     */
+    public function getQuantite()
+    {
+        return $this->quantite;
     }
 }

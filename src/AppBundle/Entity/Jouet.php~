@@ -42,12 +42,18 @@ class Jouet
      */
     private $vignette;
 
-    private $enfant;
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="quantite", type="integer", nullable=true)
+     */
+    private $quantite;
 
     // /**
     // * @ORM\OneToMany(targetEntity="AppBundle\Entity\Categories", mappedBy="jouet")
     // */
     // private $categorie;
+    private $enfant;
 
 
     /**
