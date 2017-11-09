@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Categories list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Peluches</th>
+                <th>Legoplaymobil</th>
+                <th>Poupees</th>
+                <th>Voitures</th>
+                <th>Jeuxsociete</th>
+                <th>Loisirscreatifs</th>
+                <th>Figurines</th>
+                <th>Jeuxvideos</th>
+                <th>Jeuxexterieur</th>
+                <th>Deguisement</th>
+                <th>Instrumentmusique</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for category in categories %}
+            <tr>
+                <td><a href="{{ path('categories_show', { 'id': category.id }) }}">{{ category.id }}</a></td>
+                <td>{{ category.peluches }}</td>
+                <td>{{ category.legoPlaymobil }}</td>
+                <td>{{ category.poupees }}</td>
+                <td>{{ category.voitures }}</td>
+                <td>{{ category.jeuxSociete }}</td>
+                <td>{{ category.loisirsCreatifs }}</td>
+                <td>{{ category.figurines }}</td>
+                <td>{{ category.jeuxVideos }}</td>
+                <td>{{ category.jeuxExterieur }}</td>
+                <td>{{ category.deguisement }}</td>
+                <td>{{ category.instrumentMusique }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('categories_show', { 'id': category.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('categories_edit', { 'id': category.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('categories_new') }}">Create a new category</a>
+        </li>
+    </ul>
+{% endblock %}

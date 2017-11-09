@@ -28,6 +28,13 @@ class Jouets
      */
     private $nom;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="vignette", type="string", length=255)
+     */
+    private $vignette;
+
 
     /**
      * Get id
@@ -61,5 +68,29 @@ class Jouets
     public function getNom()
     {
         return $this->nom;
+    }
+
+    /**
+     * Set vignette
+     *
+     * @param string $vignette
+     *
+     * @return Jouets
+     */
+    public function setVignette($vignette)
+    {
+        $this->vignette = $vignette;
+
+        return $this;
+    }
+
+    /**
+     * Get vignette
+     *
+     * @return string
+     */
+    public function getVignette()
+    {
+        return $this->vignette;
     }
 }

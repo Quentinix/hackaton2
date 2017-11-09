@@ -22,79 +22,79 @@ class Categories
     private $id;
 
     /**
-     * @var string
+     * @var bool
      *
-     * @ORM\Column(name="Peluches", type="string", length=255)
+     * @ORM\Column(name="Peluches", type="boolean")
      */
     private $peluches;
 
     /**
-     * @var string
+     * @var bool
      *
-     * @ORM\Column(name="Lego_Playmobil", type="string", length=255)
+     * @ORM\Column(name="legoPlaymobil", type="boolean")
      */
     private $legoPlaymobil;
 
     /**
-     * @var string
+     * @var bool
      *
-     * @ORM\Column(name="Poupees", type="string", length=255)
+     * @ORM\Column(name="poupees", type="boolean")
      */
     private $poupees;
 
     /**
-     * @var string
+     * @var bool
      *
-     * @ORM\Column(name="Voitures", type="string", length=255)
+     * @ORM\Column(name="voitures", type="boolean")
      */
     private $voitures;
 
     /**
-     * @var string
+     * @var bool
      *
-     * @ORM\Column(name="Jeux_societe", type="string", length=255)
+     * @ORM\Column(name="jeuxSociete", type="boolean")
      */
     private $jeuxSociete;
 
     /**
-     * @var string
+     * @var bool
      *
-     * @ORM\Column(name="Loisirs_creatifs", type="string", length=255)
+     * @ORM\Column(name="loisirsCreatifs", type="boolean")
      */
     private $loisirsCreatifs;
 
     /**
-     * @var string
+     * @var bool
      *
-     * @ORM\Column(name="Figurines", type="string", length=255)
+     * @ORM\Column(name="figurines", type="boolean")
      */
     private $figurines;
 
     /**
-     * @var string
+     * @var bool
      *
-     * @ORM\Column(name="Jeux_videos", type="string", length=255)
+     * @ORM\Column(name="jeuxVideos", type="boolean")
      */
     private $jeuxVideos;
 
     /**
-     * @var string
+     * @var bool
      *
-     * @ORM\Column(name="Jeux_exterieur", type="string", length=255)
+     * @ORM\Column(name="jeuxExterieur", type="boolean")
      */
     private $jeuxExterieur;
 
     /**
-     * @var string
+     * @var bool
      *
-     * @ORM\Column(name="Deguisement", type="string", length=255)
+     * @ORM\Column(name="deguisement", type="boolean")
      */
     private $deguisement;
 
     /**
-     * @var string
+     * @var bool
      *
-     * @ORM\Column(name="Instrument_musique", type="string", length=255)
+     * @ORM\Column(name="instrumentMusique", type="boolean")
      */
     private $instrumentMusique;
 
@@ -373,4 +373,3 @@ class Categories
         return $this->instrumentMusique;
     }
 }
-

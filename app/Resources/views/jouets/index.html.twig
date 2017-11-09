@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Jouets list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for jouet in jouets %}
+            <tr>
+                <td><a href="{{ path('jouets_show', { 'id': jouet.id }) }}">{{ jouet.id }}</a></td>
+                <td>{{ jouet.nom }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('jouets_show', { 'id': jouet.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('jouets_edit', { 'id': jouet.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('jouets_new') }}">Create a new jouet</a>
+        </li>
+    </ul>
+{% endblock %}
