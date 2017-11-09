@@ -27,8 +27,9 @@ Construire</button> -->
 </button>
 </div>
 <div class="modal-body">
-Les petits elfes travaillent dur...
+Les petits lutins travaillent dur...
 </div>
+<img class="img-responsive" src="http://a142.idata.over-blog.com/1/43/11/45/lutins-final-photoshop.jpg" />
 <div class="modal-footer">
 <button type="button" class="btn btn-secondary" data-dismiss="modal">Le jouet est construit</button>
 </div>

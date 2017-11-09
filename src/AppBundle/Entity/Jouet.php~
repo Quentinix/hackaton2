@@ -52,9 +52,9 @@ class Jouet
     /**
      * @var string
      *
-     * @ORM\Column(name="quantite_a_produire", type="integer", nullable=true)
+     * @ORM\Column(name="quantitie_commandee", type="integer", nullable=true)
      */
-    private $quantite_a_produire;
+    private $quantitie_commandee;
 
     // /**
     // * @ORM\OneToMany(targetEntity="AppBundle\Entity\Categories", mappedBy="jouet")
@@ -167,5 +167,77 @@ class Jouet
     public function getQuantite()
     {
         return $this->quantite;
+    }
+
+    /**
+     * Set quantiteStock
+     *
+     * @param integer $quantiteStock
+     *
+     * @return Jouet
+     */
+    public function setQuantiteStock($quantiteStock)
+    {
+        $this->quantite_stock = $quantiteStock;
+
+        return $this;
+    }
+
+    /**
+     * Get quantiteStock
+     *
+     * @return integer
+     */
+    public function getQuantiteStock()
+    {
+        return $this->quantite_stock;
+    }
+
+    // /**
+    //  * Set quantitieCommandee
+    //  *
+    //  * @param integer $quantitieCommandee
+    //  *
+    //  * @return Jouet
+    //  */
+    // public function setQuantitieCommandee($quantitieCommandee)
+    // {
+    //     $this->quantitie_commandee = $quantitieCommandee;
+    //
+    //     return $this;
+    // }
+    //
+    // /**
+    //  * Get quantitieCommandee
+    //  *
+    //  * @return integer
+    //  */
+    // public function getQuantitieCommandee()
+    // {
+    //     return $this->quantitie_commandee;
+    // }
+
+    /**
+     * Set quantitieCommandee
+     *
+     * @param integer $quantitieCommandee
+     *
+     * @return Jouet
+     */
+    public function setQuantitieCommandee($quantitieCommandee)
+    {
+        $this->quantitie_commandee = $quantitieCommandee;
+
+        return $this;
+    }
+
+    /**
+     * Get quantitieCommandee
+     *
+     * @return integer
+     */
+    public function getQuantitieCommandee()
+    {
+        return $this->quantitie_commandee;
     }
 }
