@@ -1,8 +1,8 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <div class="container margintop">
-        <div class="panel panel-danger">
+    <div class="container">
+        <div class="margintop panel panel-danger">
             <div class="panel-heading">
                 <h3 class="panel-title">{{ jouet.nom }}</h3>
             </div>
@@ -24,7 +24,7 @@
 
         <ul>
             <li>
-                <a href="{{ path('jouet_index') }}">Back to the list</a>
+                <a class="link" href="{{ path('jouet_index') }}">Back to the list</a>
             </li>
         </ul>
     </div>

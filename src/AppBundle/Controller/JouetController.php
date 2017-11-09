@@ -54,7 +54,7 @@ class JouetController extends Controller
         $em = $this->getDoctrine()->getManager();
         $jouet = $em->getRepository('AppBundle:Jouet')->findAll();
         // var_dump($jouet);
-        $result = array();
+
         foreach ($jouet as $array) {
                 $value = $array->getQuantiteStock();
                 var_dump($value);
