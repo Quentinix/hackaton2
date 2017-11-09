@@ -52,10 +52,15 @@ class JouetController extends Controller
     */
     public function listeJouetsAFabriquerAction() {
         $em = $this->getDoctrine()->getManager();
-        $jouet = $em->getRepository('AppBundle:Jouet')->findOneBy($jouet['2']);
-        var_dump($jouet);
-        var_dump($jouet->getQuantiteStock(['700']['nom']));
-        var_dump($quantite_stock);
+        $jouet = $em->getRepository('AppBundle:Jouet')->findAll();
+        // var_dump($jouet);
+        $result = array();
+        foreach ($jouet as $array) {
+                $value = $array->getQuantiteStock();
+                var_dump($value);
+                // var_dump($jouet->getQuantiteStock(['nom']));
+        }
+        // var_dump($quantite_stock);
         // if ($quantite_stock<$quantitie_commandee) {
 
         // $quantitie_a_produire--;
