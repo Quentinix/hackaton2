@@ -1,2 +1,25 @@
+<<<<<<< HEAD
 .*
+=======
+/.web-server-pid
+/app/config/parameters.yml
+/build/
+/phpunit.xml
+/var/*
+!/var/cache
+/var/cache/*
+!var/cache/.gitkeep
+!/var/logs
+/var/logs/*
+!var/logs/.gitkeep
+!/var/sessions
+/var/sessions/*
+!var/sessions/.gitkeep
+!var/SymfonyRequirements.php
+/vendor/
+/web/bundles/
+
+
+.*
+>>>>>>> b719c5e49b14f12c00e75465db558ef46dd41a8c
 !.gitignore
