@@ -287,26 +287,26 @@ class Enfants
     }
 
     /**
-     * Set jouets
+     * Set jouet
      *
-     * @param \AppBundle\Entity\Jouets $jouets
+     * @param \AppBundle\Entity\jouet $jouet
      *
      * @return Enfants
      */
-    public function setJouets(\AppBundle\Entity\Jouets $jouets)
+    public function setjouet(\AppBundle\Entity\jouet $jouet)
     {
-        $this->jouets = $jouets;
+        $this->jouet = $jouet;
 
         return $this;
     }
 
     /**
-     * Get jouets
+     * Get jouet
      *
-     * @return \AppBundle\Entity\Jouets
+     * @return \AppBundle\Entity\jouet
      */
-    public function getJouets()
+    public function getjouet()
     {
-        return $this->jouets;
+        return $this->jouet;
     }
 }

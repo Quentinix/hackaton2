@@ -127,7 +127,7 @@ h6, .h6 {
     color: #DDDCDC;
 }
 
-/* Taille des images dans les jouets */
+/* Taille des images dans les jouet */
 jouet img
 {
     max-width: 100%;
@@ -281,7 +281,7 @@ a.link {
     text-decoration: underline;
 }
 
-/* Affichage des jouets/fiches */
+/* Affichage des jouet/fiches */
 img.resize {
     max-width: 100%;
     display: block;

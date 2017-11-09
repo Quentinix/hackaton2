@@ -24,12 +24,12 @@ class JouetController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $jouets = $em->getRepository('AppBundle:Jouet')->findAll();
-        $jouets = $em->getRepository('AppBundle:Enfants')->findAll();
+        $jouet = $em->getRepository('AppBundle:Jouet')->findAll();
+        $enfants = $em->getRepository('AppBundle:Enfants')->findAll();
 
         return $this->render('jouet/index.html.twig', array(
             'jouet' => $jouet,
-            'enfant' => $enfants
+            'enfants' => $enfants
         ));
     }
 

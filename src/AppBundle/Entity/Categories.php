@@ -99,10 +99,10 @@ class Categories
     private $instrumentMusique;
 
     /**
-    * @ORM\ManyToMany(targetEntity="AppBundle\Entity\Jouets")
+    * @ORM\ManyToMany(targetEntity="AppBundle\Entity\jouet")
     * @ORM\JoinColumn(nullable=false)
     */
-    private $jouets;
+    private $jouet;
 
 
     /**
@@ -383,19 +383,19 @@ class Categories
      */
     public function __construct()
     {
-        $this->jouets = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->jouet = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
     /**
      * Add jouet
      *
-     * @param \AppBundle\Entity\Jouets $jouet
+     * @param \AppBundle\Entity\jouet $jouet
      *
      * @return Categories
      */
-    public function addJouet(\AppBundle\Entity\Jouets $jouet)
+    public function addJouet(\AppBundle\Entity\jouet $jouet)
     {
-        $this->jouets[] = $jouet;
+        $this->jouet[] = $jouet;
 
         return $this;
     }
@@ -403,20 +403,20 @@ class Categories
     /**
      * Remove jouet
      *
-     * @param \AppBundle\Entity\Jouets $jouet
+     * @param \AppBundle\Entity\jouet $jouet
      */
-    public function removeJouet(\AppBundle\Entity\Jouets $jouet)
+    public function removeJouet(\AppBundle\Entity\jouet $jouet)
     {
-        $this->jouets->removeElement($jouet);
+        $this->jouet->removeElement($jouet);
     }
 
     /**
-     * Get jouets
+     * Get jouet
      *
      * @return \Doctrine\Common\Collections\Collection
      */
-    public function getJouets()
+    public function getjouet()
     {
-        return $this->jouets;
+        return $this->jouet;
     }
 }

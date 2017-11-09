@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Jouets list</h1>
+    <h1>Jouet list</h1>
 
     <table>
         <thead>
@@ -16,7 +16,7 @@
             </tr>
         </thead>
         <tbody>
-        {% for jouet in jouets %}
+        {% for jouet in jouet %}
             <tr>
                 <td><a href="{{ path('jouet_show', { 'id': jouet.id }) }}">{{ jouet.id }}</a></td>
                 <td>{{ jouet.nom }}</td>

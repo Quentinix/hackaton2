@@ -45,7 +45,7 @@ class Jouet
     private $enfant;
 
     // /**
-    // * @ORM\OneToMany(targetEntity="AppBundle\Entity\Categories", mappedBy="jouets")
+    // * @ORM\OneToMany(targetEntity="AppBundle\Entity\Categories", mappedBy="jouet")
     // */
     // private $categorie;
 

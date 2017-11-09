@@ -42,6 +42,13 @@ class Jouet
      */
     private $vignette;
 
+    private $enfant;
+
+    // /**
+    // * @ORM\OneToMany(targetEntity="AppBundle\Entity\Categories", mappedBy="jouet")
+    // */
+    // private $categorie;
+
 
     /**
      * Get id
@@ -125,4 +132,3 @@ class Jouet
         return $this->vignette;
     }
 }
-
