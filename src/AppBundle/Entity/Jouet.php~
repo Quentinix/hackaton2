@@ -45,9 +45,16 @@ class Jouet
     /**
      * @var string
      *
-     * @ORM\Column(name="quantite", type="integer", nullable=true)
+     * @ORM\Column(name="quantite_stock", type="integer", nullable=true)
      */
-    private $quantite;
+    private $quantite_stock;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="quantite_a_produire", type="integer", nullable=true)
+     */
+    private $quantite_a_produire;
 
     // /**
     // * @ORM\OneToMany(targetEntity="AppBundle\Entity\Categories", mappedBy="jouet")
@@ -136,5 +143,29 @@ class Jouet
     public function getVignette()
     {
         return $this->vignette;
+    }
+
+    /**
+     * Set quantite
+     *
+     * @param integer $quantite
+     *
+     * @return Jouet
+     */
+    public function setQuantite($quantite)
+    {
+        $this->quantite = $quantite;
+
+        return $this;
+    }
+
+    /**
+     * Get quantite
+     *
+     * @return integer
+     */
+    public function getQuantite()
+    {
+        return $this->quantite;
     }
 }

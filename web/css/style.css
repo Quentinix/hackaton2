@@ -10,7 +10,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-    color: #DDDCDC;
+    color: #404040;
 }
 
 .container
@@ -167,8 +167,7 @@ p.thick {
 
 /* Affichage des résultats de recherche (liste) - enfant/date */
 p.grey {
-    color: #999999;
-    margin-top: -7px;
+    color: #404040;
 }
 
 /* Affichage des résultats de recherche (liste) - liens */
