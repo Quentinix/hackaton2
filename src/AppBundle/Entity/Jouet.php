@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Jouet
  *
- * @ORM\Table(name="jouet")
+ * @ORM\Table(name="Jouet")
  * @ORM\Entity(repositoryClass="AppBundle\Repository\JouetRepository")
  */
 class Jouet
@@ -57,7 +57,7 @@ class Jouet
     private $quantitie_commandee;
 
     // /**
-    // * @ORM\OneToMany(targetEntity="AppBundle\Entity\Categories", mappedBy="jouet")
+    // * @ORM\OneToMany(targetEntity="AppBundle\Entity\Categories", mappedBy="Jouet")
     // */
     // private $categorie;
     private $enfant;
@@ -193,30 +193,6 @@ class Jouet
         return $this->quantite_stock;
     }
 
-    // /**
-    //  * Set quantitieCommandee
-    //  *
-    //  * @param integer $quantitieCommandee
-    //  *
-    //  * @return Jouet
-    //  */
-    // public function setQuantitieCommandee($quantitieCommandee)
-    // {
-    //     $this->quantitie_commandee = $quantitieCommandee;
-    //
-    //     return $this;
-    // }
-    //
-    // /**
-    //  * Get quantitieCommandee
-    //  *
-    //  * @return integer
-    //  */
-    // public function getQuantitieCommandee()
-    // {
-    //     return $this->quantitie_commandee;
-    // }
-
     /**
      * Set quantitieCommandee
      *
@@ -240,4 +216,28 @@ class Jouet
     {
         return $this->quantitie_commandee;
     }
+    //
+    // /**
+    //  * Set quantitieCommandee
+    //  *
+    //  * @param integer $quantitieCommandee
+    //  *
+    //  * @return Jouet
+    //  */
+    // public function setQuantitieCommandee($quantitieCommandee)
+    // {
+    //     $this->quantitie_commandee = $quantitieCommandee;
+    //
+    //     return $this;
+    // }
+    //
+    // /**
+    //  * Get quantitieCommandee
+    //  *
+    //  * @return integer
+    //  */
+    // public function getQuantitieCommandee()
+    // {
+    //     return $this->quantitie_commandee;
+    // }
 }

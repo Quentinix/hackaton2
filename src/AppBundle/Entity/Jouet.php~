@@ -193,30 +193,6 @@ class Jouet
         return $this->quantite_stock;
     }
 
-    // /**
-    //  * Set quantitieCommandee
-    //  *
-    //  * @param integer $quantitieCommandee
-    //  *
-    //  * @return Jouet
-    //  */
-    // public function setQuantitieCommandee($quantitieCommandee)
-    // {
-    //     $this->quantitie_commandee = $quantitieCommandee;
-    //
-    //     return $this;
-    // }
-    //
-    // /**
-    //  * Get quantitieCommandee
-    //  *
-    //  * @return integer
-    //  */
-    // public function getQuantitieCommandee()
-    // {
-    //     return $this->quantitie_commandee;
-    // }
-
     /**
      * Set quantitieCommandee
      *
@@ -240,4 +216,28 @@ class Jouet
     {
         return $this->quantitie_commandee;
     }
+    //
+    // /**
+    //  * Set quantitieCommandee
+    //  *
+    //  * @param integer $quantitieCommandee
+    //  *
+    //  * @return Jouet
+    //  */
+    // public function setQuantitieCommandee($quantitieCommandee)
+    // {
+    //     $this->quantitie_commandee = $quantitieCommandee;
+    //
+    //     return $this;
+    // }
+    //
+    // /**
+    //  * Get quantitieCommandee
+    //  *
+    //  * @return integer
+    //  */
+    // public function getQuantitieCommandee()
+    // {
+    //     return $this->quantitie_commandee;
+    // }
 }
