@@ -172,8 +172,14 @@ p.grey {
 
 /* Affichage des résultats de recherche (liste) - liens */
 a.link {
+    color: #008000;
     font-weight: bold;
     text-decoration: underline;
+    position:relative;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 2px;
+    font-size: 1.2em;    
+
 }
 
 /* Affichage des jouet/fiches */
