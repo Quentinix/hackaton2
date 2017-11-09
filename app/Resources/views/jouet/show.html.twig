@@ -1,8 +1,10 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+<div class="container">
     <h1>Jouet</h1>
 
+<div style="">
     <table>
         <tbody>
             <tr>
@@ -16,18 +18,20 @@
             <tr>
 
                 <th>Description</th>
-                <td>{{ jouet.description }}</td>
+                <td><p>{{ jouet.description }}</p></td>
             </tr>
             <tr>
 
-                <td>{{ jouet.vignette }}</td>
+                <td><img class="jouet" src="{{ jouet.vignette }}"></td>
             </tr>
         </tbody>
     </table>
+</div>
 
     <ul>
         <li>
             <a href="{{ path('jouet_index') }}">Back to the list</a>
         </li>
     </ul>
+</div>
 {% endblock %}

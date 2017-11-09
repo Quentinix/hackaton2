@@ -6,7 +6,7 @@
 
 body {
     background-color: #DF1414;
-    background-image: url("../img/fond_noel.jpg");
+    background-image: url("/img/fond_noel.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -128,116 +128,12 @@ h6, .h6 {
 }
 
 /* Taille des images dans les jouet */
-jouet img
+img.jouet
 {
-    max-width: 100%;
-}
-
-
-
-/*
- * RECHERCHE AVANCEE
- */
-
-/*Taille des critères*/
-#recherche_avancee label {
-    font-size: 11pt;
-    float: left;
-}
-
-#recherche_avancee p {
-    font-size: 13pt;
-}
-
-/* contrôle de l'image */
-img.mid {
-    max-width: 100%;
-    display: inline-block;
-    vertical-align: middle;
-    float: none;
-    margin-top: 5px;
-}
-
-/*Chmaps de recherche libre*/
-.input-group-addon {
-    background-color: #ffe699;
-    border-bottom: 0px solid #fff;
-}
-
-/*Bouton dropdown*/
-#recherche_avancee .btn-primary {
-    color: #000;
-    background-color: #ffe699;
-    border-color: #ffe699;
-    font-size: 13pt;
     width: 100%;
-    border-radius: 0px;
-    margin-bottom: 5px;
+    max-width: 400px;
 }
 
-#recherche_avancee .col-xs-12 {
-    width: 100%;
-    padding: 0px;
-}
-
-#recherche_avancee .btn-primary:hover {
-    color: #000;
-    background-color: #F5CE6F;
-    border-color: #F5CE6F;
-}
-
-/*Couleur du bouton déplié*/
-#recherche_avancee .btn-primary.active.focus,
-#recherche_avancee .btn-primary.active:focus,
-#recherche_avancee .btn-primary.active:hover,
-#recherche_avancee .btn-primary:active.focus,
-#recherche_avancee .btn-primary:active:focus,
-#recherche_avancee .btn-primary:active:hover,
-#recherche_avancee .open>.dropdown-toggle.btn-primary.focus,
-#recherche_avancee .open>.dropdown-toggle.btn-primary:focus,
-#recherche_avancee .open>.dropdown-toggle.btn-primary:hover {
-    color: #000;
-    background-color: #F5CE6F;
-    border-color: #F5CE6F;
-}
-
-#recherche_avancee .dropdown-menu {
-    width: 100%;
-}
-
-#recherche_avancee .btn-primary.active,
-#recherche_avancee .btn-primary:active,
-#recherche_avancee .open>.dropdown-toggle.btn-primary {
-    color: #fff;
-    background-color: #F5CE6F;
-    border-color: #F5CE6F;
-    border-color: #F5CE6F;
-}
-
-/*Postition des noms des critères et cases*/
-#recherche_avancee #taille,
-#recherche_avancee #temps,
-#recherche_avancee #espace,
-#recherche_avancee #cc {
-    float: right;
-}
-
-.recherche {
-    float: center;
-}
-
-#recherche_avancee input {
-    float: right;
-}
-
-
-/*Bouton rechercher*/
-#recherche_avancee #rechercher {
-    margin-top: 10px;
-    width: 100%;
-    background-color: #F5CE6F;
-    font-size: 14pt;
-}
 
 /*
  * FORMULAIRE DE DÉPÔT
