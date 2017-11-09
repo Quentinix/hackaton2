@@ -1,0 +1,311 @@
+/*
+ * GLOBAL
+ */
+
+/* Taille maximale des .container définit à 100% pour éviter le dépassement du body sur le côté droit */
+
+body {
+    background-color: #DF1414;
+    background-image: url("../img/fond_noel.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    color: #DDDCDC;
+}
+
+.container
+{
+    width: 100%;
+}
+
+.margintop
+{
+    margin-top: 20px;
+}
+
+.marginfooter
+{
+    margin-top: 40px;
+}
+
+/* Taille et position du conteneur principal */
+body>.container
+{
+    margin: 0 auto;
+    max-width: 800px;
+    /*border: 8px solid #ffe699;*/
+}
+
+/* Espacement vertical entre les sections */
+section
+{
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+/* première section de contribuer.php suite à suppression du carrousel*/
+section.first
+{
+    margin-top: 48px;
+    margin-bottom: 24px;
+}
+
+fieldset
+{
+    margin-bottom: 16px;
+}
+
+/* Style du logo Facebook */
+#logo-facebook
+{
+    width: 32px;
+}
+
+/* Style de la bannière */
+#banner
+{
+    margin-top: 30px;
+}
+
+#banner img
+{
+    width: 100%;
+}
+
+/* Style du Carousel - désactivé */
+/*#carousel,
+#carousel img
+{
+    width: 230px;
+}
+
+#carousel
+{
+    margin: 16px auto 16px auto;
+}
+
+#carousel img
+{
+    height: 150px;
+    border-radius: 4px;
+}
+
+#carousel .carousel-control
+{
+    background: none;
+}*/
+
+/* Style du pied de page */
+footer a
+{
+    font-size: 1em;
+    color: gray;
+}
+
+/* Augmentation de la taille des <h?> pour un meilleur affichage sur smartphone */
+h1, .h1 {
+    font-size: 3.6em; /* equal to 36px */
+}
+h2, .h2 {
+    font-size: 3.0em; /* equal to 30px */
+}
+h3, .h3 {
+    font-size: 2.4em; /* equal to 24px */
+}
+h4, .h4 {
+    font-size: 1.8em; /* equal to 18px */
+}
+h5, .h5 {
+    font-size: 1.4em; /* equal to 14px */
+}
+h6, .h6 {
+    font-size: 1.2em; /* equal to 12px */
+}
+
+/*Couleur des <h?>*/
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    color: #DDDCDC;
+}
+
+/* Taille des images dans les jouets */
+jouet img
+{
+    max-width: 100%;
+}
+
+
+
+/*
+ * RECHERCHE AVANCEE
+ */
+
+/*Taille des critères*/
+#recherche_avancee label {
+    font-size: 11pt;
+    float: left;
+}
+
+#recherche_avancee p {
+    font-size: 13pt;
+}
+
+/* contrôle de l'image */
+img.mid {
+    max-width: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+    margin-top: 5px;
+}
+
+/*Chmaps de recherche libre*/
+.input-group-addon {
+    background-color: #ffe699;
+    border-bottom: 0px solid #fff;
+}
+
+/*Bouton dropdown*/
+#recherche_avancee .btn-primary {
+    color: #000;
+    background-color: #ffe699;
+    border-color: #ffe699;
+    font-size: 13pt;
+    width: 100%;
+    border-radius: 0px;
+    margin-bottom: 5px;
+}
+
+#recherche_avancee .col-xs-12 {
+    width: 100%;
+    padding: 0px;
+}
+
+#recherche_avancee .btn-primary:hover {
+    color: #000;
+    background-color: #F5CE6F;
+    border-color: #F5CE6F;
+}
+
+/*Couleur du bouton déplié*/
+#recherche_avancee .btn-primary.active.focus,
+#recherche_avancee .btn-primary.active:focus,
+#recherche_avancee .btn-primary.active:hover,
+#recherche_avancee .btn-primary:active.focus,
+#recherche_avancee .btn-primary:active:focus,
+#recherche_avancee .btn-primary:active:hover,
+#recherche_avancee .open>.dropdown-toggle.btn-primary.focus,
+#recherche_avancee .open>.dropdown-toggle.btn-primary:focus,
+#recherche_avancee .open>.dropdown-toggle.btn-primary:hover {
+    color: #000;
+    background-color: #F5CE6F;
+    border-color: #F5CE6F;
+}
+
+#recherche_avancee .dropdown-menu {
+    width: 100%;
+}
+
+#recherche_avancee .btn-primary.active,
+#recherche_avancee .btn-primary:active,
+#recherche_avancee .open>.dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color: #F5CE6F;
+    border-color: #F5CE6F;
+    border-color: #F5CE6F;
+}
+
+/*Postition des noms des critères et cases*/
+#recherche_avancee #taille,
+#recherche_avancee #temps,
+#recherche_avancee #espace,
+#recherche_avancee #cc {
+    float: right;
+}
+
+.recherche {
+    float: center;
+}
+
+#recherche_avancee input {
+    float: right;
+}
+
+
+/*Bouton rechercher*/
+#recherche_avancee #rechercher {
+    margin-top: 10px;
+    width: 100%;
+    background-color: #F5CE6F;
+    font-size: 14pt;
+}
+
+/*
+ * FORMULAIRE DE DÉPÔT
+ */
+
+.checkbox,
+.radio
+{
+    display: inline-block;
+}
+
+label
+{
+    margin-left: 24px;
+    font-weight: normal;
+}
+
+.help-block
+{
+    color: red;
+}
+
+/*
+ * PAGE RESULTATS
+ */
+
+/* Affichage des résultats de recherche (liste) */
+p.thick {
+    font-weight: bold;
+}
+
+/* Affichage des résultats de recherche (liste) - enfant/date */
+p.grey {
+    color: #999999;
+    margin-top: -7px;
+}
+
+/* Affichage des résultats de recherche (liste) - liens */
+a.link {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Affichage des jouets/fiches */
+img.resize {
+    max-width: 100%;
+    display: block;
+}
+
+/* Affichage de la date sur l'jouet */
+p.grey-nospace {
+    color: #999999;
+}
+
+
+
+/*
+ *PAGE COMMENT CA MARCHE
+ */
+
+ .consulter {
+    margin-bottom: 50px;
+}
+
+.deposer {
+    margin-bottom: 50px;
+}
+
+.cc {
+    margin-top: 50px;
+}

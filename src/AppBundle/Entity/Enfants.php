@@ -78,8 +78,8 @@ class Enfants
     private $lettre;
 
     /**
-    * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Jouets")
-    * @ORM\JoinColumn(nullable=false)
+    * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Jouet")
+    * @ORM\JoinColumn(nullable=true)
     */
     private $jouets;
 
