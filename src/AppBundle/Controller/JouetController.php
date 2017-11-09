@@ -48,7 +48,7 @@ class JouetController extends Controller
     }
 
     /**
-    *@Route("/lutin/{id_jouet}", name="lutin")
+    *@Route("/lutin/", name="lutin")
     */
 
     public function listeJouetsAFabriquerAction() {
