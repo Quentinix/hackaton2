@@ -8,6 +8,7 @@
             <tr>
                 <th>Id</th>
                 <th>Nom</th>
+                <th>Vignette</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -16,6 +17,7 @@
             <tr>
                 <td><a href="{{ path('jouets_show', { 'id': jouet.id }) }}">{{ jouet.id }}</a></td>
                 <td>{{ jouet.nom }}</td>
+                <td>{{ jouet.vignette }}</td>
                 <td>
                     <ul>
                         <li>
