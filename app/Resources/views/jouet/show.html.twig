@@ -14,7 +14,12 @@
                 <td>{{ jouet.nom }}</td>
             </tr>
             <tr>
-                <th>Vignette</th>
+
+                <th>Description</th>
+                <td>{{ jouet.description }}</td>
+            </tr>
+            <tr>
+
                 <td>{{ jouet.vignette }}</td>
             </tr>
         </tbody>
@@ -22,15 +27,7 @@
 
     <ul>
         <li>
-            <a href="{{ path('jouets_index') }}">Back to the list</a>
-        </li>
-        <li>
-            <a href="{{ path('jouets_edit', { 'id': jouet.id }) }}">Edit</a>
-        </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
-            {{ form_end(delete_form) }}
+            <a href="{{ path('jouet_index') }}">Back to the list</a>
         </li>
     </ul>
 {% endblock %}

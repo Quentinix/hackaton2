@@ -25,9 +25,11 @@ class EnfantsController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $enfants = $em->getRepository('AppBundle:Enfants')->findAll();
+        $jouet = $em->getRepository('AppBundle:Jouet')->findAll();
 
         return $this->render('enfants/index.html.twig', array(
             'enfants' => $enfants,
+            'jouet' => $jouet,
         ));
     }
 
