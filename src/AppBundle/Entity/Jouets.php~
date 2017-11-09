@@ -35,6 +35,16 @@ class Jouets
      */
     private $vignette;
 
+    /**
+    * @ORM\OneToMany(targetEntity="AppBundle\Entity\Enfants", mappedBy="jouets")
+    */
+    private $enfant;
+
+    // /**
+    // * @ORM\OneToMany(targetEntity="AppBundle\Entity\Categories", mappedBy="jouets")
+    // */
+    // private $categorie;
+
 
     /**
      * Get id
@@ -92,5 +102,46 @@ class Jouets
     public function getVignette()
     {
         return $this->vignette;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->enfant = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add enfant
+     *
+     * @param \WCS\CoavBundle\Entity\Enfants $enfant
+     *
+     * @return Jouets
+     */
+    public function addEnfant(\WCS\CoavBundle\Entity\Enfants $enfant)
+    {
+        $this->enfant[] = $enfant;
+
+        return $this;
+    }
+
+    /**
+     * Remove enfant
+     *
+     * @param \WCS\CoavBundle\Entity\Enfants $enfant
+     */
+    public function removeEnfant(\WCS\CoavBundle\Entity\Enfants $enfant)
+    {
+        $this->enfant->removeElement($enfant);
+    }
+
+    /**
+     * Get enfant
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getEnfant()
+    {
+        return $this->enfant;
     }
 }

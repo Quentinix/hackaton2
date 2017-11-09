@@ -98,6 +98,12 @@ class Categories
      */
     private $instrumentMusique;
 
+    /**
+    * @ORM\ManyToMany(targetEntity="AppBundle\Entity\Jouets")
+    * @ORM\JoinColumn(nullable=false)
+    */
+    private $jouets;
+
 
     /**
      * Get id
@@ -371,5 +377,46 @@ class Categories
     public function getInstrumentMusique()
     {
         return $this->instrumentMusique;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->jouets = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add jouet
+     *
+     * @param \AppBundle\Entity\Jouets $jouet
+     *
+     * @return Categories
+     */
+    public function addJouet(\AppBundle\Entity\Jouets $jouet)
+    {
+        $this->jouets[] = $jouet;
+
+        return $this;
+    }
+
+    /**
+     * Remove jouet
+     *
+     * @param \AppBundle\Entity\Jouets $jouet
+     */
+    public function removeJouet(\AppBundle\Entity\Jouets $jouet)
+    {
+        $this->jouets->removeElement($jouet);
+    }
+
+    /**
+     * Get jouets
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getJouets()
+    {
+        return $this->jouets;
     }
 }

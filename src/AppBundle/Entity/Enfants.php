@@ -77,6 +77,12 @@ class Enfants
      */
     private $lettre;
 
+    /**
+    * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Jouets")
+    * @ORM\JoinColumn(nullable=false)
+    */
+    private $jouets;
+
 
     /**
      * Get id
@@ -278,5 +284,29 @@ class Enfants
     public function getLettre()
     {
         return $this->lettre;
+    }
+
+    /**
+     * Set jouets
+     *
+     * @param \AppBundle\Entity\Jouets $jouets
+     *
+     * @return Enfants
+     */
+    public function setJouets(\AppBundle\Entity\Jouets $jouets)
+    {
+        $this->jouets = $jouets;
+
+        return $this;
+    }
+
+    /**
+     * Get jouets
+     *
+     * @return \AppBundle\Entity\Jouets
+     */
+    public function getJouets()
+    {
+        return $this->jouets;
     }
 }
