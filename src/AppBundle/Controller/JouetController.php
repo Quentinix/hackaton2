@@ -58,7 +58,7 @@ class JouetController extends Controller
 
         foreach ($jouet as $array) {
                 $stock = $array->getQuantiteStock();
-                $commande=$array->getQuantitieCommandee();
+                $commande=$array->getquantiteCommandee();
                 $diff=$stock-$commande;
                 // var_dump($jouet->getQuantiteStock(['nom']));
                 $constuire=include ('JuliaWIP/boutonConstruction.php');
@@ -78,9 +78,9 @@ class JouetController extends Controller
 
 
         // var_dump($quantite_stock);
-        // if ($quantite_stock<$quantitie_commandee) {
+        // if ($quantite_stock<$quantite_commandee) {
 
-        // $quantitie_a_produire--;
+        // $quantite_a_produire--;
 
 
 }

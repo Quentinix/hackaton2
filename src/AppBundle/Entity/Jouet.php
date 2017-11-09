@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Jouet
  *
- * @ORM\Table(name="Jouet")
+ * @ORM\Table(name="jouet")
  * @ORM\Entity(repositoryClass="AppBundle\Repository\JouetRepository")
  */
 class Jouet
@@ -52,12 +52,12 @@ class Jouet
     /**
      * @var string
      *
-     * @ORM\Column(name="quantitie_commandee", type="integer", nullable=true)
+     * @ORM\Column(name="quantite_commandee", type="integer", nullable=true)
      */
-    private $quantitie_commandee;
+    private $quantite_commandee;
 
     // /**
-    // * @ORM\OneToMany(targetEntity="AppBundle\Entity\Categories", mappedBy="Jouet")
+    // * @ORM\OneToMany(targetEntity="AppBundle\Entity\Categories", mappedBy="jouet")
     // */
     // private $categorie;
     private $enfant;
@@ -194,50 +194,50 @@ class Jouet
     }
 
     /**
-     * Set quantitieCommandee
+     * Set quantiteCommandee
      *
-     * @param integer $quantitieCommandee
+     * @param integer $quantiteCommandee
      *
      * @return Jouet
      */
-    public function setQuantitieCommandee($quantitieCommandee)
+    public function setquantiteCommandee($quantiteCommandee)
     {
-        $this->quantitie_commandee = $quantitieCommandee;
+        $this->quantite_commandee = $quantiteCommandee;
 
         return $this;
     }
 
     /**
-     * Get quantitieCommandee
+     * Get quantiteCommandee
      *
      * @return integer
      */
-    public function getQuantitieCommandee()
+    public function getquantiteCommandee()
     {
-        return $this->quantitie_commandee;
+        return $this->quantite_commandee;
     }
     //
     // /**
-    //  * Set quantitieCommandee
+    //  * Set quantiteCommandee
     //  *
-    //  * @param integer $quantitieCommandee
+    //  * @param integer $quantiteCommandee
     //  *
     //  * @return Jouet
     //  */
-    // public function setQuantitieCommandee($quantitieCommandee)
+    // public function setquantiteCommandee($quantiteCommandee)
     // {
-    //     $this->quantitie_commandee = $quantitieCommandee;
+    //     $this->quantite_commandee = $quantiteCommandee;
     //
     //     return $this;
     // }
     //
     // /**
-    //  * Get quantitieCommandee
+    //  * Get quantiteCommandee
     //  *
     //  * @return integer
     //  */
-    // public function getQuantitieCommandee()
+    // public function getquantiteCommandee()
     // {
-    //     return $this->quantitie_commandee;
+    //     return $this->quantite_commandee;
     // }
 }
