@@ -46,4 +46,32 @@ class JouetController extends Controller
             'jouet' => $jouet,
         ));
     }
+
+    /**
+    *@Route("/lutin/{id_jouet}", name="lutin")
+    */
+    public function listeJouetsAFabriquerAction() {
+        $em = $this->getDoctrine()->getManager();
+        $jouet = $em->getRepository('AppBundle:Jouet')->findOneBy($jouet['2']);
+        var_dump($jouet);
+        var_dump($jouet->getQuantiteStock(['700']['nom']));
+        var_dump($quantite_stock);
+        // if ($quantite_stock<$quantitie_commandee) {
+
+        // $quantitie_a_produire--;
+
+        return $this->render('jouet/index.html.twig');
+    }
 }
+//
+// $em = $this->getDoctrine()->getManager();
+//         $personnage = new Personnage();
+//
+//         $personnage->setPrenom($prenom);
+//         $personnage->setNom($nom);
+//         $personnage->setSexe($sexe);
+//         $personnage->setBio($bio);
+//
+//         $em->persist($personnage);
+//
+//         $em->flush();
