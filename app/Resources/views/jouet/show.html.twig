@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <div class="container">
+    <div class="container margintop">
         <div class="panel panel-danger">
             <div class="panel-heading">
                 <h3 class="panel-title">{{ jouet.nom }}</h3>
@@ -13,8 +13,10 @@
                             <p class="grey">{{ jouet.description }}</p>
                         </tr>
                     </tbody>
-                    <div class="container text-center">
-                        <img class="thumbnail col-xs-6" src="{{ jouet.vignette }}">
+                    <div class="container">
+                        <div class="row">
+                            <img class="thumbnail col-xs-4 col-xs-offset-4" src="{{ jouet.vignette }}">
+                        </div>
                     </div>
                 </table>
             </div>

@@ -168,4 +168,52 @@ class Jouet
     {
         return $this->quantite;
     }
+
+    /**
+     * Set quantiteStock
+     *
+     * @param integer $quantiteStock
+     *
+     * @return Jouet
+     */
+    public function setQuantiteStock($quantiteStock)
+    {
+        $this->quantite_stock = $quantiteStock;
+
+        return $this;
+    }
+
+    /**
+     * Get quantiteStock
+     *
+     * @return integer
+     */
+    public function getQuantiteStock()
+    {
+        return $this->quantite_stock;
+    }
+
+    /**
+     * Set quantiteAProduire
+     *
+     * @param integer $quantiteAProduire
+     *
+     * @return Jouet
+     */
+    public function setQuantiteAProduire($quantiteAProduire)
+    {
+        $this->quantite_a_produire = $quantiteAProduire;
+
+        return $this;
+    }
+
+    /**
+     * Get quantiteAProduire
+     *
+     * @return integer
+     */
+    public function getQuantiteAProduire()
+    {
+        return $this->quantite_a_produire;
+    }
 }
