@@ -1,40 +1,31 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+    <div class="container">
     <h1>Jouet list</h1>
 
     <table>
         <thead>
             <tr>
-                <th>Id</th>
+                <th></th>
                 <th>Nom</th>
 
                 <th>Description</th>
 
-                <th>Vignette</th>
-                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
         {% for jouet in jouet %}
             <tr>
-                <td><a href="{{ path('jouet_show', { 'id': jouet.id }) }}">{{ jouet.id }}</a></td>
-                <td>{{ jouet.nom }}</td>
-
+                <td><a href="{{ path('jouet_show', { 'id': jouet.id }) }}">{{ jouet.nom }}</a></td>
                 <td>{{ jouet.description }}</td>
 
-                <td>{{ jouet.vignette }}</td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('jouet_show', { 'id': jouet.id }) }}">show</a>
-                        </li>
-                    </ul>
-                </td>
+                <td><a href="{{ path('jouet_show', { 'id': jouet.id }) }}"><img class="thumbnail col-xs-4" src="{{ jouet.vignette }}"></a></td>
+
             </tr>
         {% endfor %}
         </tbody>
     </table>
-
+</div>
 
 {% endblock %}
