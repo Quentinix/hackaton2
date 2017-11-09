@@ -1,0 +1,243 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Jouet
+ *
+ * @ORM\Table(name="jouet")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\JouetRepository")
+ */
+class Jouet
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nom", type="string", length=128)
+     */
+    private $nom;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="description", type="text", nullable=true)
+     */
+    private $description;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="vignette", type="string", length=255, nullable=true)
+     */
+    private $vignette;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="quantite_stock", type="integer", nullable=true)
+     */
+    private $quantite_stock;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="quantitie_commandee", type="integer", nullable=true)
+     */
+    private $quantitie_commandee;
+
+    // /**
+    // * @ORM\OneToMany(targetEntity="AppBundle\Entity\Categories", mappedBy="jouet")
+    // */
+    // private $categorie;
+    private $enfant;
+
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set nom
+     *
+     * @param string $nom
+     *
+     * @return Jouet
+     */
+    public function setNom($nom)
+    {
+        $this->nom = $nom;
+
+        return $this;
+    }
+
+    /**
+     * Get nom
+     *
+     * @return string
+     */
+    public function getNom()
+    {
+        return $this->nom;
+    }
+
+    /**
+     * Set description
+     *
+     * @param string $description
+     *
+     * @return Jouet
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * Set vignette
+     *
+     * @param string $vignette
+     *
+     * @return Jouet
+     */
+    public function setVignette($vignette)
+    {
+        $this->vignette = $vignette;
+
+        return $this;
+    }
+
+    /**
+     * Get vignette
+     *
+     * @return string
+     */
+    public function getVignette()
+    {
+        return $this->vignette;
+    }
+
+    /**
+     * Set quantite
+     *
+     * @param integer $quantite
+     *
+     * @return Jouet
+     */
+    public function setQuantite($quantite)
+    {
+        $this->quantite = $quantite;
+
+        return $this;
+    }
+
+    /**
+     * Get quantite
+     *
+     * @return integer
+     */
+    public function getQuantite()
+    {
+        return $this->quantite;
+    }
+
+    /**
+     * Set quantiteStock
+     *
+     * @param integer $quantiteStock
+     *
+     * @return Jouet
+     */
+    public function setQuantiteStock($quantiteStock)
+    {
+        $this->quantite_stock = $quantiteStock;
+
+        return $this;
+    }
+
+    /**
+     * Get quantiteStock
+     *
+     * @return integer
+     */
+    public function getQuantiteStock()
+    {
+        return $this->quantite_stock;
+    }
+
+    // /**
+    //  * Set quantitieCommandee
+    //  *
+    //  * @param integer $quantitieCommandee
+    //  *
+    //  * @return Jouet
+    //  */
+    // public function setQuantitieCommandee($quantitieCommandee)
+    // {
+    //     $this->quantitie_commandee = $quantitieCommandee;
+    //
+    //     return $this;
+    // }
+    //
+    // /**
+    //  * Get quantitieCommandee
+    //  *
+    //  * @return integer
+    //  */
+    // public function getQuantitieCommandee()
+    // {
+    //     return $this->quantitie_commandee;
+    // }
+
+    /**
+     * Set quantitieCommandee
+     *
+     * @param integer $quantitieCommandee
+     *
+     * @return Jouet
+     */
+    public function setQuantitieCommandee($quantitieCommandee)
+    {
+        $this->quantitie_commandee = $quantitieCommandee;
+
+        return $this;
+    }
+
+    /**
+     * Get quantitieCommandee
+     *
+     * @return integer
+     */
+    public function getQuantitieCommandee()
+    {
+        return $this->quantitie_commandee;
+    }
+}

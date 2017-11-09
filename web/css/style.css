@@ -1,0 +1,245 @@
+/*
+ * GLOBAL
+ */
+
+/* Taille maximale des .container définit à 100% pour éviter le dépassement du body sur le côté droit */
+
+body {
+    background-color: #DF1414;
+    background-image: url("/img/fond_noel.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    color: #404040;
+}
+
+.container
+{
+    width: 100%;
+}
+
+.margintop
+{
+    margin-top: 40px;
+}
+
+.marginfooter
+{
+    margin-top: 40px;
+}
+
+/* Taille et position du conteneur principal */
+body>.container
+{
+    margin: 0 auto;
+    max-width: 800px;
+    /*border: 8px solid #ffe699;*/
+}
+
+/* Espacement vertical entre les sections */
+section
+{
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+/* première section de contribuer.php suite à suppression du carrousel*/
+section.first
+{
+    margin-top: 48px;
+    margin-bottom: 24px;
+}
+
+fieldset
+{
+    margin-bottom: 16px;
+}
+
+/* Style du logo Facebook */
+#logo-facebook
+{
+    width: 32px;
+}
+
+/* Style de la bannière */
+#banner
+{
+    margin-top: 30px;
+}
+
+#banner img
+{
+    width: 100%;
+}
+
+/* Style du Carousel - désactivé */
+/*#carousel,
+#carousel img
+{
+    width: 230px;
+}
+
+#carousel
+{
+    margin: 16px auto 16px auto;
+}
+
+#carousel img
+{
+    height: 150px;
+    border-radius: 4px;
+}
+
+#carousel .carousel-control
+{
+    background: none;
+}*/
+
+/* Style du pied de page */
+footer a
+{
+    font-size: 1em;
+    color: gray;
+}
+
+/* Augmentation de la taille des <h?> pour un meilleur affichage sur smartphone */
+h1, .h1 {
+    font-size: 3.6em; /* equal to 36px */
+}
+h2, .h2 {
+    font-size: 3.0em; /* equal to 30px */
+}
+h3, .h3 {
+    font-size: 2.4em; /* equal to 24px */
+}
+h4, .h4 {
+    font-size: 1.8em; /* equal to 18px */
+}
+h5, .h5 {
+    font-size: 1.4em; /* equal to 14px */
+}
+h6, .h6 {
+    font-size: 1.2em; /* equal to 12px */
+}
+
+/*Couleur des <h?>*/
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    color: #DDDCDC;
+}
+
+/* Taille des images dans les jouet */
+img.jouet
+{
+    width: 100%;
+    max-width: 400px;
+}
+
+
+/*
+ * FORMULAIRE DE DÉPÔT
+ */
+
+.checkbox,
+.radio
+{
+    display: inline-block;
+}
+
+label
+{
+    margin-left: 24px;
+    font-weight: normal;
+}
+
+.help-block
+{
+    color: red;
+}
+
+/*
+ * PAGE RESULTATS
+ */
+
+/* Affichage des résultats de recherche (liste) */
+p.thick {
+    font-weight: bold;
+}
+
+/* Affichage des résultats de recherche (liste) - enfant/date */
+p.grey {
+    color: #404040;
+}
+
+/* Affichage des résultats de recherche (liste) - liens */
+a.link {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Affichage des jouet/fiches */
+img.resize {
+    max-width: 100%;
+    display: block;
+}
+
+/* Affichage de la date sur l'jouet */
+p.grey-nospace {
+    color: #999999;
+}
+
+
+
+/*
+ *PAGE COMMENT CA MARCHE
+ */
+
+ .consulter {
+    margin-bottom: 50px;
+}
+
+.deposer {
+    margin-bottom: 50px;
+}
+
+.cc {
+    margin-top: 50px;
+}
+
+
+/*EnfantFormAdd debut*/
+
+div#appbundle_enfants {
+    color: black;
+}
+
+input[type="submit"] {
+    height: 40px;
+    width: 278px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+form {
+    text-align: left;
+}
+
+.align-left {
+    margin: auto;
+    width: 311px;
+    text-align: left;
+}
+
+input#appbundle_enfants_nom {
+    color: black;
+}
+
+label.required {
+    color: black;
+}
+
+.EnfantFormAdd {
+    margin: auto;
+    width: 278px;
+}
+
+/*EnfantFormAdd fin*/

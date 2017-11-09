@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+.*
+=======
 /.web-server-pid
 /app/config/parameters.yml
 /build/
@@ -18,4 +21,5 @@
 
 
 .*
+>>>>>>> b719c5e49b14f12c00e75465db558ef46dd41a8c
 !.gitignore

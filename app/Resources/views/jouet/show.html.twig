@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        <div class="margintop panel panel-danger">
+            <div class="panel-heading">
+                <h3 class="panel-title">{{ jouet.nom }}</h3>
+            </div>
+            <div class="panel-body">
+                <table>
+                    <tbody>
+                        <tr>
+                            <p class="grey">{{ jouet.description }}</p>
+                        </tr>
+                    </tbody>
+                    <div class="container">
+                        <div class="row">
+                            <img class="thumbnail col-xs-4 col-xs-offset-4" src="{{ jouet.vignette }}">
+                        </div>
+                    </div>
+                </table>
+            </div>
+        </div>
+
+        <ul>
+            <li>
+                <a class="link" href="{{ path('jouet_index') }}">Back to the list</a>
+            </li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
