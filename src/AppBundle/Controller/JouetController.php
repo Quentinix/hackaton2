@@ -50,24 +50,42 @@ class JouetController extends Controller
     /**
     *@Route("/lutin/{id_jouet}", name="lutin")
     */
+
     public function listeJouetsAFabriquerAction() {
         $em = $this->getDoctrine()->getManager();
         $jouet = $em->getRepository('AppBundle:Jouet')->findAll();
         // var_dump($jouet);
 
         foreach ($jouet as $array) {
-                $value = $array->getQuantiteStock();
-                var_dump($value);
+                $stock = $array->getQuantiteStock();
+                $commande=$array->getQuantitieCommandee();
+                $diff=$stock-$commande;
                 // var_dump($jouet->getQuantiteStock(['nom']));
+                $constuire=include ('JuliaWIP/boutonConstruction.php');
+                if ($stock<$commande) {
+                    // $constuire;
+                    // $contruire=include ('JuliaWIP/boutonConstruction.php');
+                }
+                else {
+                    echo "Le stock est à jour";
+                }
         }
+        return $this->render('jouet/index.html.twig');
+}
+        // else {
+        //
+        // }
+
+
         // var_dump($quantite_stock);
         // if ($quantite_stock<$quantitie_commandee) {
 
         // $quantitie_a_produire--;
 
-        return $this->render('jouet/index.html.twig');
-    }
+
 }
+
+
 //
 // $em = $this->getDoctrine()->getManager();
 //         $personnage = new Personnage();
