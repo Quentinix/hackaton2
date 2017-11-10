@@ -15,7 +15,8 @@ class EnfantsType extends AbstractType
     {
         $builder->add('nom')->add('prenom')->add('age')->add('numeroVoie')->add('rue')->add('codePostal')->add('ville')->add('lettre')
         ->add('categorie', EntityType::class,[
-            'class'=>'AppBundle:Categorie'
+            'class'=>'AppBundle:Categorie',
+            'choice_label' => 'label',
         ]);
     }
     /**
