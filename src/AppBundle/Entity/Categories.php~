@@ -495,4 +495,18 @@ class Categories
     {
         return $this->enfant;
     }
+
+    /**
+     * Set enfant
+     *
+     * @param string $enfant
+     *
+     * @return Categories
+     */
+    public function setEnfant($enfant)
+    {
+        $this->enfant = $enfant;
+
+        return $this;
+    }
 }
