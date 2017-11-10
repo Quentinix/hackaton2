@@ -394,11 +394,11 @@ class Enfants
     /**
      * Set plane
      *
-     * @param \WCS\CoavBundle\Entity\Categories $plane
+     * @param \AppBundle\Entity\Categories $plane
      *
      * @return Enfants
      */
-    public function setPlane(\WCS\CoavBundle\Entity\Categories $plane)
+    public function setPlane(\AppBundle\Entity\Categories $plane)
     {
         $this->plane = $plane;
 
@@ -408,7 +408,7 @@ class Enfants
     /**
      * Get plane
      *
-     * @return \WCS\CoavBundle\Entity\Categories
+     * @return \AppBundle\Entity\Categories
      */
     public function getPlane()
     {

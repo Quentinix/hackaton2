@@ -13,6 +13,28 @@ body {
     font-family: Mountains of Christmas;
 }
 
+.jouet {
+    margin-top: 200px;
+}
+
+.panel.panel-danger {
+    margin-top: 500px;
+}
+.col-xs-4.link {
+    font-size: 25px;
+}
+
+p {
+    margin: 0 0 10px;
+    font-size: 30px;
+}
+
+#container {
+    padding: 2em;
+    font-family: Mountains of CHristmas;
+    margin-top: 100px;
+}
+
 .padding {
     background-color: #fff;
 }

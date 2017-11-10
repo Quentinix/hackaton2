@@ -6,6 +6,9 @@ use AppBundle\Entity\Enfants;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component\HttpFoundation\Request;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
+use AppBundle\Entity\Categories;
+
 
 /**
  * Enfant controller.
@@ -14,12 +17,12 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component
  */
 class EnfantsController extends Controller
 {
-    /**
-     * Lists all enfant entities.
-     *
-     * @Route("/", name="enfants_index")
-     * @Method("GET")
-     */
+//     /**
+//      * Lists all enfant entities.
+//      *
+//      * @Route("/", name="enfants_index")
+//      * @Method("GET")
+//      */
     public function indexAction()
     {
         $em = $this->getDoctrine()->getManager();
@@ -36,7 +39,7 @@ class EnfantsController extends Controller
     /**
      * Creates a new enfant entity.
      *
-     * @Route("/new", name="enfants_new")
+     * @Route("/", name="enfants")
      * @Method({"GET", "POST"})
      */
     public function newAction(Request $request)
