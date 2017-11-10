@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +14,7 @@
 
 <!-- Button trigger modal -->
 
-<a  href="jouet/lutin/2.html?ajout=1" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" >
+<a  href="jouet/lutin/<?php echo $array->getId();?>/<?php echo $array->getQuantiteStock()+1;?>" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" >
   <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Construire
 </a>
 <!-- Modal -->
@@ -20,12 +23,14 @@
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">Le jouet est en construction</h5>
             </div>
+
         <div class="modal-body">
             Les petits lutins travaillent dur...
         </div>
         <img class="img-responsive" src="http://a142.idata.over-blog.com/1/43/11/45/lutins-final-photoshop.jpg" />
         <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Le jouet est construit</button>
+            <a href="/jouet/lutin/<?php echo $array->getId();?>/<?php echo $array->getQuantiteStock()+1;?>" type="button" class="btn btn-secondary" >Le jouet est construit</button>
+
         </div>
     </div>
 </div>

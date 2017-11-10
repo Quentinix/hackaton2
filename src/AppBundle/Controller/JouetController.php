@@ -3,6 +3,7 @@
 namespace AppBundle\Controller;
 
 use AppBundle\Entity\Jouet;
+use AppBundle\Repository\JouetRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -36,7 +37,7 @@ class JouetController extends Controller
     /**
      * Finds and displays a jouet entity.
      *
-     * @Route("/{id}", name="jouet_show")
+     * @Route("/{id}", name="jouet_show", requirements={"id": "\d+"})
      * @Method("GET")
      */
     public function showAction(Jouet $jouet)
@@ -48,10 +49,18 @@ class JouetController extends Controller
     }
 
     /**
-    *@Route("/lutin/{id}", name="lutin")
+    *@Route("/lutin/{id}/{quantity}", name="lutin", requirements={"id": "\d+"})
     */
 
-    public function listeJouetsAFabriquerAction() {
+    public function listeJouetsAFabriquerAction($id = null, $quantity = null) {
+        if($id != null && $quantity != null){ //j'ai clique sur construire
+            $em = $this->getDoctrine()->getManager();
+            $jouet = $em->getRepository('AppBundle:Jouet')->find($id);
+            $jouet->setQuantiteStock($quantity);
+            $em->flush();
+
+        }
+
         echo "
         <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
         <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js'></script>
@@ -64,7 +73,7 @@ class JouetController extends Controller
 		<link href='http://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'>
         ";
         $em = $this->getDoctrine()->getManager();
-        $jouet = $em->getRepository('AppBundle:Jouet')->findAll();
+        $jouets = $em->getRepository('AppBundle:Jouet')->findAll();
         // var_dump($jouet);
         echo "
         Chers lutins, voici la liste récapitulative des jouets.
@@ -78,7 +87,7 @@ class JouetController extends Controller
                 <th>A construire</th>
             </tr>
             ";
-        foreach ($jouet as $array) {
+        foreach ($jouets as $array) {
             // var_dump($jouet);
             $nom=$array->getNom();
             $stock = $array->getQuantiteStock();
