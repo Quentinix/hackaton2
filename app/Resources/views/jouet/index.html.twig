@@ -1,8 +1,17 @@
+{% block stylesheets %}
+<body style="background-image:url('{{ asset('img/fond_enfant.jpg') }}')">
+
+{% endblock %}
+
 {% extends 'base.html.twig' %}
+
+
 
 {% block body %}
     <div class="container">
+        <div class=jouet>
         <h1>Unsra Schpeelzickla</h1>
+        </div>
         <div class="panel panel-danger">
             <table>
                 <tbody>
@@ -18,5 +27,6 @@
         </table>
     </div>
 </div>
+<div>
 
 {% endblock %}

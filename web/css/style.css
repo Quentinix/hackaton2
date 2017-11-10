@@ -3,16 +3,66 @@
  */
 
 /* Taille maximale des .container définit à 100% pour éviter le dépassement du body sur le côté droit */
-
 body {
-    background-color: #DF1414;
-    background-image: url("/img/fond_noel.jpg");
+    background-image: url("/img/fond_noel_2.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
     color: #404040;
+    background-size: 100%;
+    font-family: Mountains of Christmas;
 }
 
+.panel-danger {
+    border-color: #ebccd1;
+    margin-top: 500px;
+}
+
+.jouet > h1 {
+    color: #9c4141;
+    margin-top: 300px;
+    margin-left: 250px;
+}
+
+.text-center {
+    font-size: 40px;
+}
+
+.navbar-default {
+    background-color: #f8f8f8;
+    border-color: #e7e7e7;
+    padding: 15px;
+}
+
+.navbar-default .navbar-brand {
+    color: #000;
+    font-size: 30px;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #000;
+    font-size: 30px;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #9c4141;
+    border-color: #9c4141;
+    padding: 20px;
+    font-size: 30px;
+}
+
+#wrapper {
+    width: 80%;
+    margin: 2em auto;
+        margin-top: 2em;
+    background-color: #11ffee00;
+    margin-top: 400px;
+}
+#container {
+    padding: 2em;
+    font-family: Mountains of CHristmas;
+}
 .container
 {
     width: 100%;
@@ -21,27 +71,6 @@ body {
 .margintop
 {
     margin-top: 40px;
-}
-
-td.padding
-{
-    text-align: justify;
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-.navbar-default .navbar-brand {
-    color: #DF1414;
-}
-
-.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
-    color: #008000;
-    background-color: #e7e7e7;
-}
-
-.navbar-default .navbar-nav>li>a {
-    color: #008000;
 }
 
 .marginfooter
@@ -193,14 +222,12 @@ p.grey {
 
 /* Affichage des résultats de recherche (liste) - liens */
 a.link {
-    color: #008000;
+    color: #9c4141;
     font-weight: bold;
     text-decoration: underline;
-    position:relative;
-    background-color: rgba(255, 255, 255, 0.6);
+    position: relative;
     border-radius: 2px;
     font-size: 1.2em;
-
 }
 
 /* Affichage des jouet/fiches */
@@ -270,8 +297,3 @@ label.required {
 }
 
 /*EnfantFormAdd fin*/
-
-td {
-    width: 300px;
-    text-align: center;
-}

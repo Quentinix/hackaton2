@@ -56,6 +56,7 @@ class JouetController extends Controller
         <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
         <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js'></script>
         <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+
         ";
 
         echo "
@@ -112,7 +113,7 @@ class JouetController extends Controller
                 <th>Quantitées commandées</th>
                 <th>Qantitées en stock</th>
                 <th>Usine</th>
-                <th>A constuire</th>
+                <th>A construire</th>
             </tr>
             ";
         foreach ($jouet as $array) {
@@ -153,7 +154,7 @@ class JouetController extends Controller
                     // include ('JuliaWIP/boutonConstruction.php');
                     echo '
                     <!-- Button trigger modal -->
-                    <a  href="construire?id=1&id_jouet=1" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" >
+                    <a  href="?ajout=1" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" >
                       <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Construire
                     </a>
                     <!-- <button type="button" <input type="submit" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"  >
