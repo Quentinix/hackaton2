@@ -65,7 +65,7 @@ class EnfantsController extends Controller
     /**
      * Finds and displays a enfant entity.
      *
-     * @Route("/{id}", name="enfants_show")
+     * @Route("/{id}", name="enfants_index")
      * @Method("GET")
      */
     public function showAction(Enfants $enfant)
