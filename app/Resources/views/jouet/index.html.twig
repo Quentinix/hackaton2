@@ -2,30 +2,21 @@
 
 {% block body %}
     <div class="container">
-    <h1>Jouet list</h1>
+        <h1>Unsra Schpeelzickla</h1>
+        <div class="panel panel-danger">
+            <table>
+                <tbody>
+                {% for jouet in jouet %}
+                        <tr>
+                            <td class="padding"><a class="link" href="{{ path('jouet_show', { 'id': jouet.id }) }}"><div class="text-center">{{ jouet.nom }}</div></a></td>
+                            <td class="padding">{{ jouet.description }}</td>
+                            <td class="padding"><a href="{{ path('jouet_show', { 'id': jouet.id }) }}"><img class="thumbnail col-xs-8 col-xs-offset-2" src="{{ jouet.vignette }}"></a></td>
+                        </tr>
+                {% endfor %}
 
-    <table>
-        <thead>
-            <tr>
-                <th></th>
-                <th>Nom</th>
-
-                <th>Description</th>
-
-            </tr>
-        </thead>
-        <tbody>
-        {% for jouet in jouet %}
-            <tr>
-                <td><a href="{{ path('jouet_show', { 'id': jouet.id }) }}">{{ jouet.nom }}</a></td>
-                <td>{{ jouet.description }}</td>
-
-                <td><a href="{{ path('jouet_show', { 'id': jouet.id }) }}"><img class="thumbnail col-xs-4" src="{{ jouet.vignette }}"></a></td>
-
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+</tbody>
+        </table>
+    </div>
 </div>
 
 {% endblock %}
