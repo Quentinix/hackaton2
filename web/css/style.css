@@ -178,7 +178,7 @@ a.link {
     position:relative;
     background-color: rgba(255, 255, 255, 0.6);
     border-radius: 2px;
-    font-size: 1.2em;    
+    font-size: 1.2em;
 
 }
 
@@ -249,3 +249,8 @@ label.required {
 }
 
 /*EnfantFormAdd fin*/
+
+td {
+    width: 300px;
+    text-align: center;
+}

@@ -98,11 +98,9 @@ class Categories
      */
     private $instrumentMusique;
 
-    /**
-    * @ORM\ManyToMany(targetEntity="AppBundle\Entity\jouet")
-    * @ORM\JoinColumn(nullable=false)
-    */
-    private $jouet;
+
+
+
 
 
     /**
@@ -418,5 +416,77 @@ class Categories
     public function getjouet()
     {
         return $this->jouet;
+    }
+
+    /**
+     * Set jouet
+     *
+     * @param \AppBundle\Entity\Jouet $jouet
+     *
+     * @return Categories
+     */
+    public function setJouet(\AppBundle\Entity\Jouet $jouet = null)
+    {
+        $this->jouet = $jouet;
+
+        return $this;
+    }
+
+    /**
+     * Set enfants
+     *
+     * @param \AppBundle\Entity\Enfants $enfants
+     *
+     * @return Categories
+     */
+    public function setEnfants(\AppBundle\Entity\Enfants $enfants = null)
+    {
+        $this->enfants = $enfants;
+
+        return $this;
+    }
+
+    /**
+     * Get enfants
+     *
+     * @return \AppBundle\Entity\Enfants
+     */
+    public function getEnfants()
+    {
+        return $this->enfants;
+    }
+
+    /**
+     * Add enfant
+     *
+     * @param \AppBundle\Entity\Enfants $enfant
+     *
+     * @return Categories
+     */
+    public function addEnfant(\AppBundle\Entity\Enfants $enfant)
+    {
+        $this->enfant[] = $enfant;
+
+        return $this;
+    }
+
+    /**
+     * Remove enfant
+     *
+     * @param \AppBundle\Entity\Enfants $enfant
+     */
+    public function removeEnfant(\AppBundle\Entity\Enfants $enfant)
+    {
+        $this->enfant->removeElement($enfant);
+    }
+
+    /**
+     * Get enfant
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getEnfant()
+    {
+        return $this->enfant;
     }
 }

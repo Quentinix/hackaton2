@@ -56,11 +56,8 @@ class Jouet
      */
     private $quantite_commandee;
 
-    // /**
-    // * @ORM\OneToMany(targetEntity="AppBundle\Entity\Categories", mappedBy="jouet")
-    // */
-    // private $categorie;
-    private $enfant;
+
+
 
 
     /**
@@ -240,4 +237,80 @@ class Jouet
     // {
     //     return $this->quantite_commandee;
     // }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->categorie = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->enfant = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add categorie
+     *
+     * @param \AppBundle\Entity\Categories $categorie
+     *
+     * @return Jouet
+     */
+    public function addCategorie(\AppBundle\Entity\Categories $categorie)
+    {
+        $this->categorie[] = $categorie;
+
+        return $this;
+    }
+
+    /**
+     * Remove categorie
+     *
+     * @param \AppBundle\Entity\Categories $categorie
+     */
+    public function removeCategorie(\AppBundle\Entity\Categories $categorie)
+    {
+        $this->categorie->removeElement($categorie);
+    }
+
+    /**
+     * Get categorie
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getCategorie()
+    {
+        return $this->categorie;
+    }
+
+    /**
+     * Add enfant
+     *
+     * @param \AppBundle\Entity\Enfants $enfant
+     *
+     * @return Jouet
+     */
+    public function addEnfant(\AppBundle\Entity\Enfants $enfant)
+    {
+        $this->enfant[] = $enfant;
+
+        return $this;
+    }
+
+    /**
+     * Remove enfant
+     *
+     * @param \AppBundle\Entity\Enfants $enfant
+     */
+    public function removeEnfant(\AppBundle\Entity\Enfants $enfant)
+    {
+        $this->enfant->removeElement($enfant);
+    }
+
+    /**
+     * Get enfant
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getEnfant()
+    {
+        return $this->enfant;
+    }
 }

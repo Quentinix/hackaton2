@@ -77,11 +77,8 @@ class Enfants
      */
     private $lettre;
 
-    /**
-    * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Jouet")
-    * @ORM\JoinColumn(nullable=true)
-    */
-    private $jouets;
+
+
 
 
     /**
@@ -332,5 +329,60 @@ class Enfants
     public function getJouets()
     {
         return $this->jouets;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->categories = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add category
+     *
+     * @param \AppBundle\Entity\Categories $category
+     *
+     * @return Enfants
+     */
+    public function addCategory(\AppBundle\Entity\Categories $category)
+    {
+        $this->categories[] = $category;
+
+        return $this;
+    }
+
+    /**
+     * Remove category
+     *
+     * @param \AppBundle\Entity\Categories $category
+     */
+    public function removeCategory(\AppBundle\Entity\Categories $category)
+    {
+        $this->categories->removeElement($category);
+    }
+
+    /**
+     * Get categories
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getCategories()
+    {
+        return $this->categories;
+    }
+
+    /**
+     * Set categories
+     *
+     * @param \AppBundle\Entity\Categories $categories
+     *
+     * @return Enfants
+     */
+    public function setCategories(\AppBundle\Entity\Categories $categories)
+    {
+        $this->categories = $categories;
+
+        return $this;
     }
 }
