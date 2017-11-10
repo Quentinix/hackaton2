@@ -62,45 +62,7 @@ class JouetController extends Controller
         echo "
         <link href='http://fonts.googleapis.com/css?family=Mountains+of+Christmas' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'>
-        <style>
-        html {
-            background-image: url(https://www.ludeek.com/wp-content/uploads/2014/11/lutin-de-noel.jpg);
-            background-repeat: no-repeat;
-            text-align: center;
-            background-position: 50% 0%;
-        }
-
-        html {
-            text-align: center;
-        }
-
-        td {
-            width: 300px;
-            border: 10px,#000;
-            padding: 30px;
-            color: #9c4141;
-            background-color: #dec6c6;
-            text-align: center;
-            font-family: Mountains of Christmas;
-            font-size: 30px;
-        }
-
-        th {
-            background-color: #9c4141;
-            padding: 40px;
-            margin-left: 20px;
-            color: #fff;
-            text-align: center;
-            font-family: Mountains of Christmas;
-            font-size: 40px;
-        }
-        body {
-            margin: 400px;
-            font-family: Mountains of Christmas;
-            font-size: 40px;
-        }
-
-    </style>";
+        ";
         $em = $this->getDoctrine()->getManager();
         $jouet = $em->getRepository('AppBundle:Jouet')->findAll();
         // var_dump($jouet);
@@ -110,8 +72,8 @@ class JouetController extends Controller
         <table>
             <tr>
                 <th>Nom du jouet</th>
-                <th>Quantitées commandées</th>
                 <th>Qantitées en stock</th>
+                <th>Quantitées commandées</th>
                 <th>Usine</th>
                 <th>A construire</th>
             </tr>
@@ -151,36 +113,21 @@ class JouetController extends Controller
                 echo "</td>";
                 echo "<td>";
                 if ($stock<$commande) {
-                    // include ('JuliaWIP/boutonConstruction.php');
-                    echo '
-                    <!-- Button trigger modal -->
-                    <a  href="?ajout=1" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" >
-                      <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Construire
-                    </a>
-                    <!-- <button type="button" <input type="submit" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"  >
-                    Construire</button> -->
+                    include ('JuliaWIP/boutonConstruction.php');
 
-                    <!-- Modal -->
-                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Le jouet est en construction</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    Les petits lutins travaillent dur...
-                                </div>
-                                    <img class="img-responsive" src="http://a142.idata.over-blog.com/1/43/11/45/lutins-final-photoshop.jpg" />
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Le jouet est construit</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    ';
+
+                    $cookie_id='ajout';
+                    if (isset($_GET['ajout'])) {
+                        var_dump($_GET['ajout']);
+                        var_dump($stock);
+
+                        $_COOKIE = $_GET['ajout'];
+                        setcookie($cookie_id, $_COOKIE, time() + (86400 * 30), "/");
+                        if ($_COOKIE=="1") {
+                            $stock++;
+                        var_dump($stock);
+                        }
+                    }
                 }
 
                 echo "<div>";

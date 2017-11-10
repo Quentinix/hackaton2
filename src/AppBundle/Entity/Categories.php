@@ -98,7 +98,13 @@ class Categories
      */
     private $instrumentMusique;
 
-
+    /**
+    * @var string
+     *
+     * @ORM\Column(name="model", type="string", length=64)
+    * @ORM\OneToMany(targetEntity="AppBundle\Entity\Enfants", mappedBy="categorie")
+    */
+    private $enfant;
 
 
 
@@ -488,5 +494,19 @@ class Categories
     public function getEnfant()
     {
         return $this->enfant;
+    }
+
+    /**
+     * Set enfant
+     *
+     * @param string $enfant
+     *
+     * @return Categories
+     */
+    public function setEnfant($enfant)
+    {
+        $this->enfant = $enfant;
+
+        return $this;
     }
 }

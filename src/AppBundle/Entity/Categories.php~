@@ -98,7 +98,13 @@ class Categories
      */
     private $instrumentMusique;
 
-
+    /**
+    * @var string
+     *
+     * @ORM\Column(name="model", type="string", length=64)
+    * @ORM\OneToMany(targetEntity="AppBundle\Entity\Enfants", mappedBy="categorie")
+    */
+    private $enfant;
 
 
 

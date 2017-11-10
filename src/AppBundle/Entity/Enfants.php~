@@ -77,6 +77,11 @@ class Enfants
      */
     private $lettre;
 
+    /**
+    * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Categories", inversedBy="enfant")
+    * @ORM\JoinColumn(nullable=false)
+    */
+    private $categorie;
 
 
 
@@ -384,5 +389,53 @@ class Enfants
         $this->categories = $categories;
 
         return $this;
+    }
+
+    /**
+     * Set plane
+     *
+     * @param \WCS\CoavBundle\Entity\Categories $plane
+     *
+     * @return Enfants
+     */
+    public function setPlane(\WCS\CoavBundle\Entity\Categories $plane)
+    {
+        $this->plane = $plane;
+
+        return $this;
+    }
+
+    /**
+     * Get plane
+     *
+     * @return \WCS\CoavBundle\Entity\Categories
+     */
+    public function getPlane()
+    {
+        return $this->plane;
+    }
+
+    /**
+     * Set categorie
+     *
+     * @param \AppBundle\Entity\Categories $categorie
+     *
+     * @return Enfants
+     */
+    public function setCategorie(\AppBundle\Entity\Categories $categorie)
+    {
+        $this->categorie = $categorie;
+
+        return $this;
+    }
+
+    /**
+     * Get categorie
+     *
+     * @return \AppBundle\Entity\Categories
+     */
+    public function getCategorie()
+    {
+        return $this->categorie;
     }
 }
