@@ -1,5 +1,8 @@
 {% extends 'base.html.twig' %}
+{% block stylesheets %}
 
+
+{% endblock %}
 {% block body %}
     <div class="container">
         <div class="margintop panel panel-danger">
@@ -7,6 +10,7 @@
                 <h3 class="panel-title">{{ jouet.nom }}</h3>
             </div>
             <div class="panel-body">
+
                 <table>
                     <tbody>
                         <tr>
@@ -21,10 +25,9 @@
                 </table>
             </div>
         </div>
-
         <ul>
             <li>
-                <a class="link" href="{{ path('jouet_index') }}">Back to the list</a>
+                <a class="link" href="{{ path('jouet_index') }}">Tzerok zum liste d'Schpeelzickla</a>
             </li>
         </ul>
     </div>

@@ -3,16 +3,107 @@
  */
 
 /* Taille maximale des .container définit à 100% pour éviter le dépassement du body sur le côté droit */
-
 body {
-    background-color: #DF1414;
-    background-image: url("/img/fond_noel.jpg");
+    background-image: url("/img/fond_noel_2.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
     color: #404040;
+    background-size: 100%;
+    font-family: Mountains of Christmas;
 }
 
+.jouet {
+    margin-top: 200px;
+}
+
+.panel.panel-danger {
+    margin-top: 500px;
+}
+.col-xs-4.link {
+    font-size: 25px;
+}
+
+p {
+    margin: 0 0 10px;
+    font-size: 30px;
+}
+
+#container {
+    padding: 2em;
+    font-family: Mountains of CHristmas;
+    margin-top: 100px;
+}
+
+.padding {
+    background-color: #fff;
+}
+        td {
+            width: 300px;
+            border: 10px,#000;
+            padding: 30px;
+            color: #9c4141;
+            background-color: #dec6c6;
+            text-align: center;
+            font-family: Mountains of Christmas;
+            font-size: 30px;
+        }
+
+        th {
+            background-color: #9c4141;
+            padding: 40px;
+            margin-left: 20px;
+            color: #fff;
+            text-align: center;
+            font-family: Mountains of Christmas;
+            font-size: 40px;
+        }
+
+.panel-danger {
+    border-color: #ebccd1;
+    margin-top: 20%;
+}
+
+.jouet > h1 {
+    color: #9c4141;
+    margin-top: 20%;
+    margin-left: 250px;
+}
+
+.text-center {
+    font-size: 40px;
+}
+
+.navbar-default {
+    background-color: #f8f8f8;
+    border-color: #e7e7e7;
+    padding: 15px;
+    font-family: Mountains of Christmas
+}
+
+.navbar-default .navbar-brand {
+    color: #000;
+    font-size: 30px;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #000;
+    font-size: 30px;
+}
+
+
+
+#wrapper {
+    width: 80%;
+    margin: 2em auto;
+        margin-top: 2em;
+    background-color: #11ffee00;
+    margin-top: 20%;
+}
+#container {
+    padding: 2em;
+    font-family: Mountains of CHristmas;
+}
 .container
 {
     width: 100%;
@@ -172,8 +263,12 @@ p.grey {
 
 /* Affichage des résultats de recherche (liste) - liens */
 a.link {
+    color: #9c4141;
     font-weight: bold;
     text-decoration: underline;
+    position: relative;
+    border-radius: 2px;
+    font-size: 1.2em;
 }
 
 /* Affichage des jouet/fiches */

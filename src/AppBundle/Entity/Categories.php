@@ -22,88 +22,19 @@ class Categories
     private $id;
 
     /**
-     * @var bool
+     * @var string
      *
-     * @ORM\Column(name="Peluches", type="boolean")
+     * @ORM\Column(name="label", type="string", length=255)
      */
-    private $peluches;
+    private $label;
 
-    /**
-     * @var bool
-     *
-     * @ORM\Column(name="legoPlaymobil", type="boolean")
-     */
-    private $legoPlaymobil;
-
-    /**
-     * @var bool
-     *
-     * @ORM\Column(name="poupees", type="boolean")
-     */
-    private $poupees;
-
-    /**
-     * @var bool
-     *
-     * @ORM\Column(name="voitures", type="boolean")
-     */
-    private $voitures;
-
-    /**
-     * @var bool
-     *
-     * @ORM\Column(name="jeuxSociete", type="boolean")
-     */
-    private $jeuxSociete;
-
-    /**
-     * @var bool
-     *
-     * @ORM\Column(name="loisirsCreatifs", type="boolean")
-     */
-    private $loisirsCreatifs;
-
-    /**
-     * @var bool
-     *
-     * @ORM\Column(name="figurines", type="boolean")
-     */
-    private $figurines;
-
-    /**
-     * @var bool
-     *
-     * @ORM\Column(name="jeuxVideos", type="boolean")
-     */
-    private $jeuxVideos;
-
-    /**
-     * @var bool
-     *
-     * @ORM\Column(name="jeuxExterieur", type="boolean")
-     */
-    private $jeuxExterieur;
-
-    /**
-     * @var bool
-     *
-     * @ORM\Column(name="deguisement", type="boolean")
-     */
-    private $deguisement;
-
-    /**
-     * @var bool
-     *
-     * @ORM\Column(name="instrumentMusique", type="boolean")
-     */
-    private $instrumentMusique;
-
-    /**
-    * @ORM\ManyToMany(targetEntity="AppBundle\Entity\jouet")
-    * @ORM\JoinColumn(nullable=false)
-    */
-    private $jouet;
-
+    // /**
+    // * @var string
+    //  *
+    //  * @ORM\Column(name="model", type="string", length=64)
+    // * @ORM\OneToMany(targetEntity="AppBundle\Entity\Enfants", mappedBy="categorie")
+    // */
+    // private $enfants;
 
     /**
      * Get id
@@ -116,307 +47,26 @@ class Categories
     }
 
     /**
-     * Set peluches
+     * Set label
      *
-     * @param string $peluches
+     * @param string $label
      *
      * @return Categories
      */
-    public function setPeluches($peluches)
+    public function setLabel($label)
     {
-        $this->peluches = $peluches;
+        $this->label = $label;
 
         return $this;
     }
 
     /**
-     * Get peluches
+     * Get label
      *
      * @return string
      */
-    public function getPeluches()
+    public function getLabel()
     {
-        return $this->peluches;
-    }
-
-    /**
-     * Set legoPlaymobil
-     *
-     * @param string $legoPlaymobil
-     *
-     * @return Categories
-     */
-    public function setLegoPlaymobil($legoPlaymobil)
-    {
-        $this->legoPlaymobil = $legoPlaymobil;
-
-        return $this;
-    }
-
-    /**
-     * Get legoPlaymobil
-     *
-     * @return string
-     */
-    public function getLegoPlaymobil()
-    {
-        return $this->legoPlaymobil;
-    }
-
-    /**
-     * Set poupees
-     *
-     * @param string $poupees
-     *
-     * @return Categories
-     */
-    public function setPoupees($poupees)
-    {
-        $this->poupees = $poupees;
-
-        return $this;
-    }
-
-    /**
-     * Get poupees
-     *
-     * @return string
-     */
-    public function getPoupees()
-    {
-        return $this->poupees;
-    }
-
-    /**
-     * Set voitures
-     *
-     * @param string $voitures
-     *
-     * @return Categories
-     */
-    public function setVoitures($voitures)
-    {
-        $this->voitures = $voitures;
-
-        return $this;
-    }
-
-    /**
-     * Get voitures
-     *
-     * @return string
-     */
-    public function getVoitures()
-    {
-        return $this->voitures;
-    }
-
-    /**
-     * Set jeuxSociete
-     *
-     * @param string $jeuxSociete
-     *
-     * @return Categories
-     */
-    public function setJeuxSociete($jeuxSociete)
-    {
-        $this->jeuxSociete = $jeuxSociete;
-
-        return $this;
-    }
-
-    /**
-     * Get jeuxSociete
-     *
-     * @return string
-     */
-    public function getJeuxSociete()
-    {
-        return $this->jeuxSociete;
-    }
-
-    /**
-     * Set loisirsCreatifs
-     *
-     * @param string $loisirsCreatifs
-     *
-     * @return Categories
-     */
-    public function setLoisirsCreatifs($loisirsCreatifs)
-    {
-        $this->loisirsCreatifs = $loisirsCreatifs;
-
-        return $this;
-    }
-
-    /**
-     * Get loisirsCreatifs
-     *
-     * @return string
-     */
-    public function getLoisirsCreatifs()
-    {
-        return $this->loisirsCreatifs;
-    }
-
-    /**
-     * Set figurines
-     *
-     * @param string $figurines
-     *
-     * @return Categories
-     */
-    public function setFigurines($figurines)
-    {
-        $this->figurines = $figurines;
-
-        return $this;
-    }
-
-    /**
-     * Get figurines
-     *
-     * @return string
-     */
-    public function getFigurines()
-    {
-        return $this->figurines;
-    }
-
-    /**
-     * Set jeuxVideos
-     *
-     * @param string $jeuxVideos
-     *
-     * @return Categories
-     */
-    public function setJeuxVideos($jeuxVideos)
-    {
-        $this->jeuxVideos = $jeuxVideos;
-
-        return $this;
-    }
-
-    /**
-     * Get jeuxVideos
-     *
-     * @return string
-     */
-    public function getJeuxVideos()
-    {
-        return $this->jeuxVideos;
-    }
-
-    /**
-     * Set jeuxExterieur
-     *
-     * @param string $jeuxExterieur
-     *
-     * @return Categories
-     */
-    public function setJeuxExterieur($jeuxExterieur)
-    {
-        $this->jeuxExterieur = $jeuxExterieur;
-
-        return $this;
-    }
-
-    /**
-     * Get jeuxExterieur
-     *
-     * @return string
-     */
-    public function getJeuxExterieur()
-    {
-        return $this->jeuxExterieur;
-    }
-
-    /**
-     * Set deguisement
-     *
-     * @param string $deguisement
-     *
-     * @return Categories
-     */
-    public function setDeguisement($deguisement)
-    {
-        $this->deguisement = $deguisement;
-
-        return $this;
-    }
-
-    /**
-     * Get deguisement
-     *
-     * @return string
-     */
-    public function getDeguisement()
-    {
-        return $this->deguisement;
-    }
-
-    /**
-     * Set instrumentMusique
-     *
-     * @param string $instrumentMusique
-     *
-     * @return Categories
-     */
-    public function setInstrumentMusique($instrumentMusique)
-    {
-        $this->instrumentMusique = $instrumentMusique;
-
-        return $this;
-    }
-
-    /**
-     * Get instrumentMusique
-     *
-     * @return string
-     */
-    public function getInstrumentMusique()
-    {
-        return $this->instrumentMusique;
-    }
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->jouet = new \Doctrine\Common\Collections\ArrayCollection();
-    }
-
-    /**
-     * Add jouet
-     *
-     * @param \AppBundle\Entity\jouet $jouet
-     *
-     * @return Categories
-     */
-    public function addJouet(\AppBundle\Entity\jouet $jouet)
-    {
-        $this->jouet[] = $jouet;
-
-        return $this;
-    }
-
-    /**
-     * Remove jouet
-     *
-     * @param \AppBundle\Entity\jouet $jouet
-     */
-    public function removeJouet(\AppBundle\Entity\jouet $jouet)
-    {
-        $this->jouet->removeElement($jouet);
-    }
-
-    /**
-     * Get jouet
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getjouet()
-    {
-        return $this->jouet;
+        return $this->label;
     }
 }

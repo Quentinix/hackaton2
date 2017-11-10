@@ -1,40 +1,32 @@
+{% block stylesheets %}
+<body style="background-image:url('{{ asset('img/fond_enfant.jpg') }}')">
+
+{% endblock %}
+
 {% extends 'base.html.twig' %}
 
+
+
 {% block body %}
-    <h1>Jouet list</h1>
+    <div class="container">
+        <div class=jouet>
+        <div class="col-xs-2 offset_col-xs-10"><img src="/img/titres/schpeelzickla_rouge.png"></div>
+        </div>
+        <div class="panel panel-danger">
+            <table>
+                <tbody>
+                {% for jouet in jouet %}
+                        <tr>
+                            <td class="padding"><a class="link" href="{{ path('jouet_show', { 'id': jouet.id }) }}"><div class="text-center">{{ jouet.nom }}</div></a></td>
+                            <td class="padding">{{ jouet.description }}</td>
+                            <td class="padding"><a href="{{ path('jouet_show', { 'id': jouet.id }) }}"><img class="thumbnail col-xs-8 col-xs-offset-2" src="{{ jouet.vignette }}"></a></td>
+                        </tr>
+                {% endfor %}
 
-    <table>
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Nom</th>
-
-                <th>Description</th>
-
-                <th>Vignette</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for jouet in jouet %}
-            <tr>
-                <td><a href="{{ path('jouet_show', { 'id': jouet.id }) }}">{{ jouet.id }}</a></td>
-                <td>{{ jouet.nom }}</td>
-
-                <td>{{ jouet.description }}</td>
-
-                <td>{{ jouet.vignette }}</td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('jouet_show', { 'id': jouet.id }) }}">show</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-
+</tbody>
+        </table>
+    </div>
+</div>
+<div>
 
 {% endblock %}

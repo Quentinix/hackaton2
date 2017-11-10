@@ -78,10 +78,12 @@ class Enfants
     private $lettre;
 
     /**
-    * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Jouet")
-    * @ORM\JoinColumn(nullable=true)
+    * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Categories", inversedBy="enfant")
+    * @ORM\JoinColumn(nullable=false)
     */
-    private $jouets;
+    private $categorie;
+
+
 
 
     /**
@@ -332,5 +334,108 @@ class Enfants
     public function getJouets()
     {
         return $this->jouets;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->categories = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add category
+     *
+     * @param \AppBundle\Entity\Categories $category
+     *
+     * @return Enfants
+     */
+    public function addCategory(\AppBundle\Entity\Categories $category)
+    {
+        $this->categories[] = $category;
+
+        return $this;
+    }
+
+    /**
+     * Remove category
+     *
+     * @param \AppBundle\Entity\Categories $category
+     */
+    public function removeCategory(\AppBundle\Entity\Categories $category)
+    {
+        $this->categories->removeElement($category);
+    }
+
+    /**
+     * Get categories
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getCategories()
+    {
+        return $this->categories;
+    }
+
+    /**
+     * Set categories
+     *
+     * @param \AppBundle\Entity\Categories $categories
+     *
+     * @return Enfants
+     */
+    public function setCategories(\AppBundle\Entity\Categories $categories)
+    {
+        $this->categories = $categories;
+
+        return $this;
+    }
+
+    /**
+     * Set plane
+     *
+     * @param \WCS\CoavBundle\Entity\Categories $plane
+     *
+     * @return Enfants
+     */
+    public function setPlane(\WCS\CoavBundle\Entity\Categories $plane)
+    {
+        $this->plane = $plane;
+
+        return $this;
+    }
+
+    /**
+     * Get plane
+     *
+     * @return \WCS\CoavBundle\Entity\Categories
+     */
+    public function getPlane()
+    {
+        return $this->plane;
+    }
+
+    /**
+     * Set categorie
+     *
+     * @param \AppBundle\Entity\Categories $categorie
+     *
+     * @return Enfants
+     */
+    public function setCategorie(\AppBundle\Entity\Categories $categorie)
+    {
+        $this->categorie = $categorie;
+
+        return $this;
+    }
+
+    /**
+     * Get categorie
+     *
+     * @return \AppBundle\Entity\Categories
+     */
+    public function getCategorie()
+    {
+        return $this->categorie;
     }
 }
