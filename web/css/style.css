@@ -13,6 +13,28 @@ body {
     font-family: Mountains of Christmas;
 }
 
+
+        td {
+            width: 300px;
+            border: 10px,#000;
+            padding: 30px;
+            color: #9c4141;
+            background-color: #dec6c6;
+            text-align: center;
+            font-family: Mountains of Christmas;
+            font-size: 30px;
+        }
+
+        th {
+            background-color: #9c4141;
+            padding: 40px;
+            margin-left: 20px;
+            color: #fff;
+            text-align: center;
+            font-family: Mountains of Christmas;
+            font-size: 40px;
+        }
+
 .panel-danger {
     border-color: #ebccd1;
     margin-top: 500px;
@@ -32,6 +54,7 @@ body {
     background-color: #f8f8f8;
     border-color: #e7e7e7;
     padding: 15px;
+    font-family: Mountains of Christmas
 }
 
 .navbar-default .navbar-brand {
@@ -44,13 +67,7 @@ body {
     font-size: 30px;
 }
 
-.btn-primary {
-    color: #fff;
-    background-color: #9c4141;
-    border-color: #9c4141;
-    padding: 20px;
-    font-size: 30px;
-}
+
 
 #wrapper {
     width: 80%;
