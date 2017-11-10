@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Jouet
  *
- * @ORM\Table(name="Jouet")
+ * @ORM\Table(name="jouet")
  * @ORM\Entity(repositoryClass="AppBundle\Repository\JouetRepository")
  */
 class Jouet
@@ -57,7 +57,7 @@ class Jouet
     private $quantite_commandee;
 
     // /**
-    // * @ORM\OneToMany(targetEntity="AppBundle\Entity\Categories", mappedBy="Jouet")
+    // * @ORM\OneToMany(targetEntity="AppBundle\Entity\Categories", mappedBy="jouet")
     // */
     // private $categorie;
     private $enfant;
