@@ -37,12 +37,12 @@ body {
 
 .panel-danger {
     border-color: #ebccd1;
-    margin-top: 500px;
+    margin-top: 20%;
 }
 
 .jouet > h1 {
     color: #9c4141;
-    margin-top: 300px;
+    margin-top: 20%;
     margin-left: 250px;
 }
 
