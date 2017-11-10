@@ -13,7 +13,10 @@ class EnfantsType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('nom')->add('prenom')->add('age')->add('numeroVoie')->add('rue')->add('codePostal')->add('ville')->add('lettre')->add('categorie');
+        $builder->add('nom')->add('prenom')->add('age')->add('numeroVoie')->add('rue')->add('codePostal')->add('ville')->add('lettre')
+        ->add('categorie', EntityType::class,[
+            'class'=>'AppBundle:Categorie'
+        ]);
     }
     /**
      * {@inheritdoc}
