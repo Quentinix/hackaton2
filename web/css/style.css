@@ -13,7 +13,9 @@ body {
     font-family: Mountains of Christmas;
 }
 
-
+.padding {
+    background-color: #fff;
+}
         td {
             width: 300px;
             border: 10px,#000;
