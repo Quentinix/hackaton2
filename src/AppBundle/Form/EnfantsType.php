@@ -2,6 +2,7 @@
 
 namespace AppBundle\Form;
 
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -14,8 +15,8 @@ class EnfantsType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder->add('nom')->add('prenom')->add('age')->add('numeroVoie')->add('rue')->add('codePostal')->add('ville')->add('lettre')
-        ->add('categorie', EntityType::class,[
-            'class'=>'AppBundle:Categorie',
+        ->add('categories', EntityType::class,[
+            'class'=>'AppBundle:Categories',
             'choice_label' => 'label',
         ]);
     }

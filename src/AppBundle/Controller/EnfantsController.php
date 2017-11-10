@@ -14,12 +14,12 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component
  */
 class EnfantsController extends Controller
 {
-    // /**
-    //  * Lists all enfant entities.
-    //  *
-    //  * @Route("/", name="enfants_index")
-    //  * @Method("GET")
-    //  */
+//     /**
+//      * Lists all enfant entities.
+//      *
+//      * @Route("/", name="enfants_index")
+//      * @Method("GET")
+//      */
     public function indexAction()
     {
         $em = $this->getDoctrine()->getManager();

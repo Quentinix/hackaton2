@@ -28,13 +28,13 @@ class Categories
      */
     private $label;
 
-    // /**
-    // * @var string
-    //  *
-    //  * @ORM\Column(name="model", type="string", length=64)
-    // * @ORM\OneToMany(targetEntity="AppBundle\Entity\Enfants", mappedBy="categorie")
-    // */
-    // private $enfants;
+    /**
+    * @var string
+     *
+     * @ORM\Column(name="model", type="string", length=64)
+    * @ORM\OneToMany(targetEntity="AppBundle\Entity\Enfants", mappedBy="categorie")
+    */
+    private $enfants;
 
     /**
      * Get id
@@ -68,5 +68,29 @@ class Categories
     public function getLabel()
     {
         return $this->label;
+    }
+
+    /**
+     * Set enfants
+     *
+     * @param string $enfants
+     *
+     * @return Categories
+     */
+    public function setEnfants($enfants)
+    {
+        $this->enfants = $enfants;
+
+        return $this;
+    }
+
+    /**
+     * Get enfants
+     *
+     * @return string
+     */
+    public function getEnfants()
+    {
+        return $this->enfants;
     }
 }
