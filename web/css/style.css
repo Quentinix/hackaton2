@@ -23,6 +23,27 @@ body {
     margin-top: 40px;
 }
 
+td.padding
+{
+    text-align: justify;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.navbar-default .navbar-brand {
+    color: #DF1414;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    color: #008000;
+    background-color: #e7e7e7;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #008000;
+}
+
 .marginfooter
 {
     margin-top: 40px;
