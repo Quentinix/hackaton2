@@ -10,23 +10,26 @@
 {% block body %}
     <div class="container">
         <div class=jouet>
-        <div class="col-xs-2 offset_col-xs-10"><img src="/img/titres/schpeelzickla_rouge.png"></div>
+            <div class="col-xs-2 offset_col-xs-10"><img src="/img/titres/schpeelzickla_rouge.png"></div>
         </div>
+        </div>
+    <div class="container">
         <div class="panel panel-danger">
             <table>
                 <tbody>
                 {% for jouet in jouet %}
                         <tr>
                             <td class="padding"><a class="link" href="{{ path('jouet_show', { 'id': jouet.id }) }}"><div class="text-center">{{ jouet.nom }}</div></a></td>
-                            <td class="padding">{{ jouet.description }}</td>
+                            <td class="padding"><h5>{{ jouet.description }}</h5></td>
                             <td class="padding"><a href="{{ path('jouet_show', { 'id': jouet.id }) }}"><img class="thumbnail col-xs-8 col-xs-offset-2" src="{{ jouet.vignette }}"></a></td>
                         </tr>
                 {% endfor %}
 
 </tbody>
         </table>
+        </div>
     </div>
-</div>
+
 <div>
 
 {% endblock %}
